@@ -32,10 +32,8 @@ test('invalid or missing method parameter throws an exception', t => {
   t.end()
 })
 
-test("when the path doesn't include a leading slash it raises an error", t => {
-  expect(() => nock('http://example.test').get('no-leading-slash')).to.throw(
-    "Non-wildcard URL path strings must begin with a slash (otherwise they won't match anything)"
-  )
+test("when the path doesn't include a leading slash it does not throw error", t => {
+  expect(() => nock('http://example.test').get('no-leading-slash')).not.to.throw()
   t.end()
 })
 
@@ -1009,10 +1007,8 @@ test('data is sent with flushHeaders', t => {
 })
 
 // https://github.com/nock/nock/issues/1730
-test('URL path without leading slash throws expected error', t => {
-  expect(() => nock('http://example.test').get('')).to.throw(
-    "Non-wildcard URL path strings must begin with a slash (otherwise they won't match anything) (got: )"
-  )
+test('URL path without leading slash does not throw error', t => {
+  expect(() => nock('http://example.test').get('')).not.to.throw()
   t.end()
 })
 
