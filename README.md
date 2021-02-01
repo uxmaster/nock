@@ -1,16 +1,8 @@
-# Nock
+# Nock pro-13.x
 
-[![npm](https://img.shields.io/npm/v/nock.svg)][npmjs]
-[![Build Status](https://travis-ci.org/nock/nock.svg)][build]
-![Coverage Status](http://img.shields.io/badge/coverage-100%25-brightgreen.svg)
-![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nock/nock)
-[![Backers on Open Collective](https://opencollective.com/nock/backers/badge.svg)](#backers)
-[![Sponsors on Open Collective](https://opencollective.com/nock/sponsors/badge.svg)](#sponsors)
+The pro fork of **nock** – the HTTP server mocking and expectations library for Node.js.
 
-[npmjs]: https://www.npmjs.com/package/nock
-[build]: https://travis-ci.org/nock/nock
-
-HTTP server mocking and expectations library for Node.js
+**WARNING: this fork assumes you know what you're doing, _e.g._ URL path strings can begin without a slash, if you can make use of them...**
 
 Nock can be used to test modules that perform HTTP requests in isolation.
 
@@ -105,26 +97,12 @@ Nock works by overriding Node's `http.request` function. Also, it overrides `htt
 ## Install
 
 ```sh
-$ npm install --save-dev nock
+$ yarn add https://github.com/uxmaster/nock.git#pro-13.x --dev
 ```
 
 ### Node version support
 
 The latest version of nock supports all currently maintained Node versions, see [Node Release Schedule](https://github.com/nodejs/Release#release-schedule)
-
-Here is a list of past nock versions with respective node version support
-
-| node | nock       |
-| ---- | ---------- |
-| 0.10 | up to 8.x  |
-| 0.11 | up to 8.x  |
-| 0.12 | up to 8.x  |
-| 4    | up to 9.x  |
-| 5    | up to 8.x  |
-| 6    | up to 10.x |
-| 7    | up to 9.x  |
-| 8    | up to 11.x |
-| 9    | up to 9.x  |
 
 ## Usage
 
